@@ -9,7 +9,7 @@ let placeElem
 let weatherImageElem
 let weatherCard={remove:()=>{}};
 
-const API_KEY="1977debf2877a0be6ba449dd01ada2ce"
+const API_KEY="--------------------------------"
 
 const mainElem=document.querySelector(".main-container")
 const searchInput=document.querySelector("#search-input")
