@@ -79,14 +79,14 @@ function insWeatherInfo(weatherInfo){
 
 // fetch weather details from external api and filter useful parts
 function getWeatherInfo(city){
-    return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`)
+    return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`)
                 .then(resp=>resp.json()).then(data=>{
                     return {
                         temperature:data.main.temp,
                         humidity:data.main.pressure,
                         wind:data.wind.speed,
                         pressure:data.main.pressure,
-                        imgUrl:`http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`,
+                        imgUrl:`https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`,
                         place:`${data.name}, ${data.sys.country}`
                     }
                 })
